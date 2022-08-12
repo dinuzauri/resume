@@ -1,459 +1,567 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>Dinu Bălan</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700|Roboto:300,400,700|Noto+Serif:400" rel="stylesheet" type="text/css">
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap");
-* {
-  margin: 0;
-  box-sizing: border-box;
+    body {
+  font-family: Roboto,Arial,sans-serif;
+  font-weight: 300;
+  background-color: #ffffff;
 }
 
-body {
-  width: 8.5in;
-  height: auto;
-  color: #2b343f;
+p {
+  display: inline;
 }
 
-p, ul, ol {
-  line-height: 1.25em;
-}
-
-strong {
-  font-weight: bold;
-}
-
-a {
-  color: #58a6ff;
+a,span {
+  color: #4c92c1;
   text-decoration: none;
 }
-a .fa-fw {
-  font-size: 90%;
-  color: #425269;
-}
-a .fa-fw:hover {
-  color: #58a6ff;
-}
-a:hover {
-  color: #58a6ff;
-  text-decoration: underline;
+
+.email,.site,.github,.phone-number,.address {
+  margin-bottom: .4em;
+  font-size: 1em;
 }
 
-hr {
-  height: 2px;
-  border: none;
-  background-color: #58a6ff;
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.flex-between {
+.card {
+  /*background-color: #fefefe;
+  box-shadow: 1px 1px 14px -5px rgba(0,0,0,0.5);
+  border-radius: 2px;*/
+  margin-bottom: 15px;
+}
+
+.header.card {
+  margin-top: 15px;
+  margin-right: 15px;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 15px 0 20px;
+  border-bottom: 1px dashed #CFCFCF;
 }
 
-body {
-  color: #2b343f;
-  font-family: Roboto, sans-serif;
+section.card {
+  padding: 15px 15px 22.5px 20px;
+}
+
+.header {
+  overflow: auto;
+  margin-left: 6px;
+  margin-right: 12px;
+}
+
+.skill {
+  font-family: Roboto,Arial,sans-serif;
+  font-size: 1em;
+  margin-bottom: .4em;
+  color: #4c92c1;
+  font-weight: 400;
+}
+
+.skills p {
+  font-size: 1em;
+}
+
+#name {
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+  color: #555;
+  float: left;
+  margin: .1em .1em .2em;
+}
+
+#resume-container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-top: 0;
+  margin-bottom: .4em;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.left-content {
+  float: left;
+  width: 32%;
+  margin-left: 6px;
+}
+
+.left-content .section-header {
+  font-weight: 400;
+  color: #BC1B39;
+  text-transform: uppercase;
+}
+
+.left-content .section-content {
   font-weight: 300;
-  font-size: 10pt;
 }
 
-h1 {
-  font-size: 22pt;
+.left-content .title {
+  font-weight: 400;
+  margin-bottom: .5em;
+  color: #4c92c1;
 }
 
-h2 {
-  font-size: 18pt;
+.left-content .card {
+  border-bottom: 1px dashed #CFCFCF;
 }
 
-h3 {
-  font-size: 11pt;
-  font-style: bold;
+.right-content {
+  width: 64%;
+  margin-right: 15px;
+  float: right;
 }
 
-h4 {
-  color: #425269;
-  font-size: 11pt;
+.right-content .section-header {
+  /*color: #000;*/
+  color: #BC1B39;
+  text-transform: uppercase;
 }
 
-h5 {
-  color: #93a1b4;
-  font-size: 9pt;
-  font-style: italic;
+.right-content {
+  border-left: 1px dashed #CFCFCF;
 }
 
-body > header, nav {
-  color: #ffffff;
-  width: 100%;
-  padding: 0.22in 0.38in;
+.section-content {
+  overflow: auto;
 }
 
-body > header {
-  background-color: #425269;
-}
-body > header h2 {
-  color: #58a6ff;
-}
-body > header p {
-  text-align: justify;
-  margin-top: 1em;
+.title {
+  font-family: Roboto,Arial,sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: .2em;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-nav {
-  background-color: #2b343f;
+.duration {
+  font-family: Roboto,Arial,sans-serif;
+  font-weight: 300;
+  color: #3c82b1;
+  margin-top: .2em;
+  margin-bottom: .3em;
+  text-align: right;
 }
-nav ul {
+
+.occupation {
+  font-size: 1em;
+  font-family: Roboto,Arial,sans-serif;
+  font-weight: 400;
+  margin-bottom: .5em;
+}
+
+.languages {
+  font-family: Roboto,Arial,sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.list {
   list-style-type: none;
-  padding-left: 0;
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-items: start;
+  font-size: 1em;
 }
 
-main {
-  margin: 0.22in 0.38in;
-}
-main > section {
-  margin-bottom: 1em;
-}
-main > section > ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-main > section > ul > li {
-  margin: 1em 0;
-}
-main > section > ul ul {
-  padding-left: 1.5em;
-}
-main > section > ul > li > ul {
-  list-style-type: disc;
+.location {
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: .1em;
 }
 
-#skills-list, #languages-list, #interests-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em;
-  margin-bottom: -1em;
+.left {
+  float: left;
+  width: 45%;
+  clear: both;
 }
 
-@page {
-  size: Letter;
-  margin: 0.22in 0;
+.right {
+  float: right;
+  width: 55%;
 }
-@page :first {
-  margin: 0;
+
+ul.list {
+  list-style-type: circle;
+  padding-left: 1.1rem;
 }
-@media print {
-  main > section {
-    page-break-inside: avoid;
-  }
-  main > section > header {
-    page-break-after: avoid;
-  }
+
+ul.list li {
+  line-height: 135%;
+  margin-bottom: .2em;
 }
+
+ul.list li:before {
+  display: inline-block;
+  width: 0;
+  margin-left: 0;
+}
+
+.project,.employment,.education,.skills {
+  margin-bottom: .8em;
+}
+
+.education-info .title {
+  margin-bottom: .2em;
+  line-height: 130%;
+}
+
+.education.last {
+  margin-bottom: .8em !important;
+}
+
+.education .grade {
+  font-size: 1em;
+}
+
+.project-info {
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.last {
+  margin-bottom: 0!important;
+}
+
+.term {
+  font-size: 1.75em;
+  font-weight: 200;
+  color: #000;
+}
+
+#skills-container,.contact {
+  margin-bottom: 0;
+}
+
+.interests,.subtitle {
+  font-size: 1em;
+  margin-bottom: .2em;
+}
+
+.project .title,.employment .title {
+  color: #4c92c1;
+  font-weight: 400;
+}
+
+.employment .summary {
+  font-size: 1em;
+  margin-bottom: .4em;
+}
+
+#awards .summary {
+  font-size: 1em;
+}
+
+#summary {
+  font-size: 1em;
+}
+
+.contact .site {
+  font-size: .9em;
+}
+
   </style>
 </head>
+
 <body>
-  	<header>
-  		<h1>Dinu Bălan</h1>
-  		<h2>Process Automation Developer at Genpact looking for a coding challenge.</h2>
-  		<p>Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position.</p>
-  	</header>
-  	<nav>
-  		<ul>
-  				<li>
-  					<span class="fas fa-fw fa-location-dot"></span>
-  						<span>Cluj-Napoca,</span>
-  						<span>Cluj</span>
-  						<span>RO</span>
-  				</li>
-  				<li>
-  					<span class="fas fa-fw fa-mobile-alt"></span>
-  					<span>0740408687</span>
-  				</li>
-  				<li>
-  					<span class="far fa-fw fa-envelope"></span>
-  					<span><a href="mailto:dinu@ik.me">dinu@ik.me</a></span>
-  				</li>
-  					<li>
-  						<span class="fab fa-fw fa-linkedin"></span>
-  							<a target="_blank" href="https://www.linkedin.com/in/dinubalan/">dinubalan</a>
-  					</li>
-  		</ul>
-  	</nav>
-  <main>
-    	<section>
-    		<header>
-    		  <h2>Skills</h2>
-    		  <hr>
-    		</header>		<ul id="skills-list">
-    				<li>
-    					<header>
-    						<h3>Macros</h3>
-    					</header>
-    						<h4>Intermediary</h4>
-    						<ul>
-    								<li>Visual Basic for Applications</li>
-    						</ul>
-    				</li>
-    				<li>
-    					<header>
-    						<h3>Java</h3>
-    					</header>
-    						<h4>Beginner</h4>
-    						<ul>
-    								<li>Core Java 8</li>
-    								<li>Servlets/JSP</li>
-    								<li>Spring</li>
-    						</ul>
-    				</li>
-    				<li>
-    					<header>
-    						<h3>Databases</h3>
-    					</header>
-    						<h4>Beginner</h4>
-    						<ul>
-    								<li>MySQL</li>
-    								<li>Access</li>
-    								<li>MongoDB</li>
-    						</ul>
-    				</li>
-    				<li>
-    					<header>
-    						<h3>Microsoft Office</h3>
-    					</header>
-    						<h4>Advanced</h4>
-    						<ul>
-    								<li>Excel</li>
-    								<li>Word</li>
-    								<li>Share-Point</li>
-    						</ul>
-    				</li>
-    				<li>
-    					<header>
-    						<h3>Robotic Process Automation (RPA)</h3>
-    					</header>
-    						<h4>Beginner</h4>
-    						<ul>
-    								<li>UiPath</li>
-    						</ul>
-    				</li>
-    		</ul>
-    	</section>
-    	<section>
-    		<header>
-    		  <h2>Work</h2>
-    		  <hr>
-    		</header>		<ul id="work-list">
-    				<li>
-    					<header>
-    						<div class="flex-between">
-    							<h3>
-    							</h3>
-    							<h5>
-    								2020-12-31
-    									<span>- Present</span>
-    							</h5>
-    						</div>
-    							<h4>Process Automation Developer</h4>
-    					</header>
-    						<p>-Builds solutions using the technology appropriate for the given task:
-        -VBA programming language
-        -Office 365 applications (Excel, Access, Outlook, SharePoint, Power BI, Power Automate, Power Query)
-        -Web &amp; SAP scripting
-        -.NET
-        -other
-    -Takes ownership for solution design, development, implementation, training, documentation and maintenance
-    -Identifies improvement opportunities to eliminate waste, automate manual work, standardize process
-    </p>
-    				</li>
-    				<li>
-    					<header>
-    						<div class="flex-between">
-    							<h3>
-    							</h3>
-    							<h5>
-    								2019-11-30
-    									<span>- 2020-12-31</span>
-    							</h5>
-    						</div>
-    							<h4>Receivables Reporting Specialist</h4>
-    					</header>
-    						<p>-Data analysis and report preparation
-    -Process performance monitoring and forecasting
-    -Reporting framework governance and development
-    -Data mining, cleaning and visual presentation</p>
-    				</li>
-    				<li>
-    					<header>
-    						<div class="flex-between">
-    							<h3>
-    							</h3>
-    							<h5>
-    								2018-11-30
-    									<span>- 2019-11-30</span>
-    							</h5>
-    						</div>
-    							<h4>Senior Financial Planning Analyst</h4>
-    					</header>
-    						<p>-Prepare internal reports for executive leadership and support their decision making.
-    -Create, update, and maintain financial models.
-    -Compare historical results against budgets and forecasts, and perform variance analysis.
-    -Implement and work with a Business Intelligence Tool and Dashboard reports.</p>
-    				</li>
-    				<li>
-    					<header>
-    						<div class="flex-between">
-    							<h3>
-    							</h3>
-    							<h5>
-    								2017-08-31
-    									<span>- 2018-11-30</span>
-    							</h5>
-    						</div>
-    							<h4>Senior General Ledger Process Associate </h4>
-    					</header>
-    						<p>-VAT reporting;
-    -B/S reconciliation and inconsistency mitigation on: services, freight, marketing and salary accounts;
-    -preparation and posting of the incoming journal entries;
-    -VBA developer of excel finance tools (e.g. trackers, journal entry error proofers, work allocation tools etc.)  </p>
-    				</li>
-    				<li>
-    					<header>
-    						<div class="flex-between">
-    							<h3>
-    							</h3>
-    							<h5>
-    								2017-01-31
-    									<span>- 2017-08-31</span>
-    							</h5>
-    						</div>
-    							<h4>Senior Accounts Payable Process Associate</h4>
-    					</header>
-    						<p>-payment preparation and execution activities
-    -help-desk
-    -sub-ledger account reconciliation
-    </p>
-    				</li>
-    				<li>
-    					<header>
-    						<div class="flex-between">
-    							<h3>
-    							</h3>
-    							<h5>
-    								2019-02-28
-    									<span>- 2019-11-30</span>
-    							</h5>
-    						</div>
-    							<h4>Junior Java Developer Trainee</h4>
-    					</header>
-    						<p>-Developed in a team and individualy Java projects in gradual complexity ranges and focusing on OOP and SOLID principles.
-    -Good command of distributed version control systems (Git) gained through dedicated classes and independently.
-    -SQL and NoSQL (MySQL, MongoDB) know-how to support modern Java development requirements.
-    -Basic front-end involvment with HTML, CSS and Javascript through personal static web-pages.
-    </p>
-    				</li>
-    				<li>
-    					<header>
-    						<div class="flex-between">
-    							<h3>
-    							</h3>
-    							<h5>
-    								2014-09-30
-    									<span>- 2015-10-31</span>
-    							</h5>
-    						</div>
-    							<h4>Customer Service Specialist</h4>
-    					</header>
-    						<p>-technical and informational customer support
-    -identification of critical problems and the escalation of those situations towards the responsible department
-    -incoming calls and e-mails handling
-    -incoming orders and payment details handling
-    -database operations</p>
-    				</li>
-    		</ul>
-    	</section>
-    	<section>
-    		<header>
-    		  <h2>Education</h2>
-    		  <hr>
-    		</header>		<ul id="education-list">
-    				<li>
-    					<header>
-    						<div class="flex-between">
-    							<h3>
-    									Bachelor’s Degree
-    										<span>of Foreign Languages, Literatures, and Linguistics</span>
-    							</h3>
-    							<h5>
-    								2011-12-31
-    									<span>- 2014-12-31</span>
-    							</h5>
-    						</div>
-    							<h4>
-    								Universitatea „Babeș-Bolyai” din Cluj-Napoca
-    							</h4>
-    					</header>
-    				</li>
-    				<li>
-    					<header>
-    						<div class="flex-between">
-    							<h3>
-    									High School
-    										<span>of Mathematics and Computer Science</span>
-    							</h3>
-    							<h5>
-    								2009-12-31
-    									<span>- 2011-12-31</span>
-    							</h5>
-    						</div>
-    							<h4>
-    								Liceul Radu Petrescu
-    							</h4>
-    					</header>
-    				</li>
-    				<li>
-    					<header>
-    						<div class="flex-between">
-    							<h3>
-    									Mathematics and Computer Science
-    							</h3>
-    							<h5>
-    								2007-12-31
-    									<span>- 2009-12-31</span>
-    							</h5>
-    						</div>
-    							<h4>
-    								Colegiul National Militar Mihai Viteazul
-    							</h4>
-    					</header>
-    				</li>
-    		</ul>
-    	</section>
-    	<section>
-    		<header>
-    		  <h2>Languages</h2>
-    		  <hr>
-    		</header>		<ul id="languages-list">
-    				<li>
-    					<header>
-    						<h3>Romanian</h3>
-    					</header>
-    						<strong>Fluency:</strong> Native Speaker
-    				</li>
-    				<li>
-    					<header>
-    						<h3>English</h3>
-    					</header>
-    						<strong>Fluency:</strong> Fluent
-    				</li>
-    		</ul>
-    	</section>
-  </main>
+  <div id='resume-container'>
+    <div class='header card'>
+      <h1 id='name'>
+          Dinu Bălan
+        </h1>
+      <span class='term'>Process Automation Developer at Genpact looking for a coding challenge.</span>
+    </div>
+    <div class='left-content'>
+      <section class='card'>
+        <div class='section-header'>Contact</div>
+        <div class='section-content' id='contact'>
+          <div class='contact'>
+            <div class='address'>
+              Cluj-Napoca, Cluj, RO
+            </div>
+            <div class='email'>
+              <a href='mailto:dinu@ik.me'>dinu@ik.me</a>
+            </div>
+              
+            <div class='site'>
+              LinkedIn: <a href='https://www.linkedin.com/in/dinubalan/'>dinubalan</a>
+            </div>
+              
+            <div class='phone-number last'>
+              <a href="tel:0740408687">0740408687</a>
+            </div>
+          </div>
+        </div>
+      </section>
+       
+      <section class='card'>
+        <div class='section-header'>Technical Skills</div>
+        <div class='section-content' id='technical-skills'>
+          <div id='skills-container'>
+            <div class='skills'>
+              <div class='skill'>Macros</div>
+               
+              <p>
+                 Visual Basic for Applications 
+              </p>
+            </div>
+            <div class='skills'>
+              <div class='skill'>Java</div>
+               
+              <p>
+                 Core Java 8,  Servlets/JSP,  Spring 
+              </p>
+            </div>
+            <div class='skills'>
+              <div class='skill'>Databases</div>
+               
+              <p>
+                 MySQL,  Access,  MongoDB 
+              </p>
+            </div>
+            <div class='skills'>
+              <div class='skill'>Microsoft Office</div>
+               
+              <p>
+                 Excel,  Word,  Share-Point 
+              </p>
+            </div>
+            <div class='skills'>
+              <div class='skill'>Robotic Process Automation (RPA)</div>
+               
+              <p>
+                 UiPath 
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+       
+      <section class='card'>
+        <div class='section-header'>Education</div>
+        <div class='section-content' id='education'>
+          <div class='education last'>
+            <div class='education-info'>
+              <div class='title'>
+                Bachelor’s Degree in Foreign Languages, Literatures, and Linguistics
+                <br>at  Universitatea „Babeș-Bolyai” din Cluj-Napoca 
+              </div>
+              <div class='duration'>
+                 Dec 2011   - Dec 2014 
+              </div>
+            </div>
+
+          </div>
+          <div class='education last'>
+            <div class='education-info'>
+              <div class='title'>
+                High School in Mathematics and Computer Science
+                <br>at  Liceul Radu Petrescu 
+              </div>
+              <div class='duration'>
+                 Dec 2009   - Dec 2011 
+              </div>
+            </div>
+
+          </div>
+          <div class='education last'>
+            <div class='education-info'>
+              <div class='title'>
+                 in Mathematics and Computer Science
+                <br>at  Colegiul National Militar Mihai Viteazul 
+              </div>
+              <div class='duration'>
+                 Dec 2007   - Dec 2009 
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+           </div>
+    <div class='right-content'>
+      <section class='card'>
+        <div class='section-header'>Summary</div>
+        <div class='section-content' id='summary'>
+          Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position.
+        </div>
+      </section>
+      <section class='card'>
+        <div class='section-header'>Employment</div>
+        <div class='section-content' id='employment'>
+          <div class='employment'>
+            <div class='employment-info'>
+              <div class='title'>
+                <a href='https://www.linkedin.com/company/210064'>
+                  		Genpact
+                  	</a>   Process Automation Developer 
+              </div>
+              <div class='duration'>
+                 Dec 2020   - Present 
+              </div>
+            </div>
+            <div class='info'>
+              <div class="summary">
+                -Builds solutions using the technology appropriate for the given task:
+    -VBA programming language
+    -Office 365 applications (Excel, Access, Outlook, SharePoint, Power BI, Power Automate, Power Query)
+    -Web &amp; SAP scripting
+    -.NET
+    -other
+-Takes ownership for solution design, development, implementation, training, documentation and maintenance
+-Identifies improvement opportunities to eliminate waste, automate manual work, standardize process
+
+              </div>
+                           </div>
+          </div>
+          <div class='employment'>
+            <div class='employment-info'>
+              <div class='title'>
+                <a href='https://www.linkedin.com/company/210064'>
+                  		Genpact
+                  	</a>   Receivables Reporting Specialist 
+              </div>
+              <div class='duration'>
+                 Nov 2019   - Dec 2020 
+              </div>
+            </div>
+            <div class='info'>
+              <div class="summary">
+                -Data analysis and report preparation
+-Process performance monitoring and forecasting
+-Reporting framework governance and development
+-Data mining, cleaning and visual presentation
+              </div>
+                           </div>
+          </div>
+          <div class='employment'>
+            <div class='employment-info'>
+              <div class='title'>
+                <a href='https://www.linkedin.com/company/210064'>
+                  		Genpact
+                  	</a>   Senior Financial Planning Analyst 
+              </div>
+              <div class='duration'>
+                 Nov 2018   - Nov 2019 
+              </div>
+            </div>
+            <div class='info'>
+              <div class="summary">
+                -Prepare internal reports for executive leadership and support their decision making.
+-Create, update, and maintain financial models.
+-Compare historical results against budgets and forecasts, and perform variance analysis.
+-Implement and work with a Business Intelligence Tool and Dashboard reports.
+              </div>
+                           </div>
+          </div>
+          <div class='employment'>
+            <div class='employment-info'>
+              <div class='title'>
+                <a href='https://www.linkedin.com/company/210064'>
+                  		GENPACT
+                  	</a>   Senior General Ledger Process Associate  
+              </div>
+              <div class='duration'>
+                 Aug 2017   - Nov 2018 
+              </div>
+            </div>
+            <div class='info'>
+              <div class="summary">
+                -VAT reporting;
+-B/S reconciliation and inconsistency mitigation on: services, freight, marketing and salary accounts;
+-preparation and posting of the incoming journal entries;
+-VBA developer of excel finance tools (e.g. trackers, journal entry error proofers, work allocation tools etc.)  
+              </div>
+                           </div>
+          </div>
+          <div class='employment'>
+            <div class='employment-info'>
+              <div class='title'>
+                <a href='https://www.linkedin.com/company/210064'>
+                  		GENPACT
+                  	</a>   Senior Accounts Payable Process Associate 
+              </div>
+              <div class='duration'>
+                 Jan 2017   - Aug 2017 
+              </div>
+            </div>
+            <div class='info'>
+              <div class="summary">
+                -payment preparation and execution activities
+-help-desk
+-sub-ledger account reconciliation
+
+              </div>
+                           </div>
+          </div>
+          <div class='employment'>
+            <div class='employment-info'>
+              <div class='title'>
+                <a href='https://www.linkedin.com/company/9433099'>
+                  		Software Development Academy
+                  	</a>   Junior Java Developer Trainee 
+              </div>
+              <div class='duration'>
+                 Feb 2019   - Nov 2019 
+              </div>
+            </div>
+            <div class='info'>
+              <div class="summary">
+                -Developed in a team and individualy Java projects in gradual complexity ranges and focusing on OOP and SOLID principles.
+-Good command of distributed version control systems (Git) gained through dedicated classes and independently.
+-SQL and NoSQL (MySQL, MongoDB) know-how to support modern Java development requirements.
+-Basic front-end involvment with HTML, CSS and Javascript through personal static web-pages.
+
+              </div>
+                           </div>
+          </div>
+          <div class='employment'>
+            <div class='employment-info'>
+              <div class='title'>
+                <a href='https://www.linkedin.com/company/4602'>
+                  		Sykes Enterprises, Incorporated
+                  	</a>   Customer Service Specialist 
+              </div>
+              <div class='duration'>
+                 Sep 2014   - Oct 2015 
+              </div>
+            </div>
+            <div class='info'>
+              <div class="summary">
+                -technical and informational customer support
+-identification of critical problems and the escalation of those situations towards the responsible department
+-incoming calls and e-mails handling
+-incoming orders and payment details handling
+-database operations
+              </div>
+                           </div>
+          </div>
+        </div>
+      </section>
+             </div>
+  </div>
 </body>
+
 </html>
