@@ -1,598 +1,426 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	<title>Dinu Bălan</title>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<style>
-		/* Utils */
-/*----- Colors -----*/
-/*----- Fonts -----*/
-/*----- Dimensions and sizes -----*/
-/* Base */
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
-
-body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  background: #f8f8f8;
-  margin: 50px 0 100px;
-  letter-spacing: .3px;
-  color: #39424B; }
-
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
-  margin: 0; }
-
-h1 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  letter-spacing: 1px; }
-
-h2 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  letter-spacing: .5px; }
-
-h3 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: .4px; }
-  h3.bold {
-    font-weight: 700; }
-
-h4 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 12px; }
-  h4.bold {
-    font-weight: 700; }
-
-h5 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 11px; }
-  h5.italic {
-    font-style: italic; }
-
-h6 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 10px; }
-
-a {
-  color: inherit;
-  text-decoration: inherit; }
-  a:hover {
-    color: #2895F1; }
-  a .fa-external-link {
-    font-size: 10px;
-    vertical-align: text-top; }
-
-p,
-li {
-  font-size: 11px; }
-
-blockquote {
-  font-size: 11px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  margin: 10px 25px; }
-
-em {
-  color: #999; }
-
-ul {
-  margin: 10px 0 0;
-  -webkit-padding-start: 25px; }
-  ul li {
-    padding-left: 10px; }
-  ul.minimal {
-    list-style: none;
-    padding: 0; }
-    ul.minimal li {
-      margin-bottom: 3px;
-      padding-left: 0; }
-  ul.two-column {
-    -webkit-column-count: 2;
-    -webkit-column-gap: 28px;
-    -moz-column-count: 2;
-         column-count: 2;
-    -moz-column-gap: 28px;
-         column-gap: 28px; }
-    ul.two-column li {
-      padding-left: 0; }
-
-@page {
-  size: A4; }
-
-.container {
-  padding-top: 20px; }
-
-.keyline {
-  width: 45px;
-  margin: 8px 0 10px;
-  border-top: 1px solid #56817A; }
-
-.pull-left {
-  float: left; }
-
-.pull-right {
-  float: right; }
-
-.clearfix:after {
-  content: "";
+    <!-- 
+      This JSON resume was rendered with the GNAP! theme. 
+      NPM: https://www.npmjs.com/package/jsonresume-theme-gnap
+      GIT: https://github.com/handiman/jsonresume-theme-gnap
+    -->
+      <script type="application/ld+json">
+      {
+        "@context": "http://schema.org"
+        "@type": "Person",
+        "name": "Dinu Bălan",
+        "summary": "Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position.",
+        "jobTitle": "Process Automation Developer at Genpact looking for a coding challenge.",
+        "phone": "0740408687",
+        "email": "dinu@ik.me",
+        "sameAs": ["https://www.linkedin.com/in/dinubalan/"]
+      }
+      </script>    
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="author" content="Dinu Bălan" />
+      <meta name="copyright" content="Dinu Bălan" />
+      <meta name="description" content="Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position." />
+      <meta name="twitter.description" content="Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position." />
+      <meta property="og:description" content="Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position." />    
+      <meta property="og:title" content="Dinu Bălan - Process Automation Developer at Genpact looking for a coding challenge." />
+      <meta property="og:site_name" content="Dinu Bălan - Process Automation Developer at Genpact looking for a coding challenge." />
+    <title>Dinu Bălan - Process Automation Developer at Genpact looking for a coding challenge.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" />
+    <style>.menu {
+  top: 0;
+  width: 2rem;
+  height: 100vh;
   display: table;
-  clear: both; }
+  position: fixed;
+  mix-blend-mode: exclusion;
+}
 
-.profile-pic {
-  margin-top: -5px;
-  margin-right: 18px; }
-  .profile-pic img {
-    height: 52px;
-    width: 52px;
-    border-radius: 50%;
-    border: 2px solid #56817A; }
+.menu div {
+  display: table-cell;
+  vertical-align: middle;
+}
 
-.summary {
-  margin: 5px 0 5px; }
+.menu li {
+  cursor: pointer;
+  text-align: center;
+}
 
-/* Layouts */
-.page {
-  background: white;
-  width: 612px;
-  min-height: 792px;
-  display: block;
-  margin: 0 auto;
-  border-top: 10px solid #56817A;
-  padding: 36px 22px 30px 34px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
-  .page:after {
-    content: "";
-    display: table;
-    clear: both; }
+.menu li a, .menu li i {
+  color: inherit;
+}
 
-.left-column {
-  float: left;
-  width: 160px;
-  margin-right: 20px;
-  word-wrap: break-word; }
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
 
-.right-column {
-  width: auto;
-  overflow: hidden; }
+.valign-wrapper {
+  min-height: 100vh;
+}
 
-.item {
-  margin-bottom: 15px; }
-  .item:last-child {
-    margin-bottom: 0; }
+footer {
+  padding: 1rem 0;
+}
+footer a {
+  color: var(--white);
+}
+
+#projects li, #references li, #skills li {
+  padding-left: 0px;
+}
+
+#projects .row, #references .row, #skills .row {
+  padding-left: 2px;
+}
+
+.inline-delimited li {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--white);
+  padding-right: .5rem;
+}
+.inline-delimited li:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: lighter;
+}
+
+.caption {
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+ul.languages {
+  display: table;
+}
+ul.languages li {
+  display: table-row;
+}
+ul.languages li div {
+  display: table-cell;
+  padding-right: 1rem;
+}
+
+#ie-notice {
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: lightyellow;
+  color: #333;
+  text-align: center; 
+  padding: 1rem;
+}
+
+.contact-form span {
+  visibility: hidden;
+  margin: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+  color: inherit;
+}
+
+ul.inline li {
+  display: inline-block;
+  margin-left: .5rem;
+}
+ul.inline li:first-child {
+  margin-left: 0;
+}
 
 @media print {
-  body {
-    margin: 0; }
-  .page {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 36px 0 30px;
-    box-shadow: none; }
-    .page .resume-header,
-    .page .resume-content {
-      padding: 0 22px 0 34px; }
-  .container {
-    page-break-inside: avoid; }
-  .work-container .item {
-    page-break-inside: avoid; }
-  .fa-external-link {
-    display: none; } }
+  * {
+    color: black;
+    background-color: white;
+  }
 
-/* Components */
-.info-tag-container {
-  margin-bottom: 5px; }
-  .info-tag-container .fa {
-    font-size: 14px;
-    width: 12px;
-    margin-right: 5px;
-    text-align: center;
-    vertical-align: middle; }
-    .info-tag-container .fa.fa-map-marker {
-      font-size: 16px; }
-    .info-tag-container .fa.fa-mobile {
-      font-size: 18px; }
-    .info-tag-container .fa.fa-envelope-o {
-      font-size: 12px; }
-    .info-tag-container .fa.fa-desktop {
-      font-size: 11px; }
-    .info-tag-container .fa.fa-external-link {
-      width: auto;
-      font-size: inherit;
-      vertical-align: text-top; }
-  .info-tag-container .info-text {
-    font-size: 9px;
-    display: inline-block;
-    vertical-align: middle;
-    width: 139px; }
+  .menu, footer, article header a, .no-print, #ie-notice {
+    display: none;
+  }
 
-.references-container .fa {
-  font-size: 14px; }
+  .valign-wrapper {
+    min-height: auto;
+  }
 
-	</style>
+  section, blockquote {
+    border:none;
+  }
+
+  blockquote {
+    padding: 0;
+  }
+}</style>
 	</head>
 	<body>
-		<main id="resume" class="page">
-			<header class="resume-header clearfix">
-			    <div class="profile-header pull-left">
-			        <h1>Dinu Bălan</h1>
-			        <h2>Process Automation Developer at Genpact looking for a coding challenge.</h2>
-			    </div>
-			    <div class="profile-pic pull-right">
-			        <img src="" alt="profile-pic">
-			    </div>
-			</header>
-			<div class="resume-content">
-				<aside class="left-column">
-					<div class="container about-container">
-					    <div class="title">
-					        <h3>About</h3>
-					        <div class="keyline"></div>
-					    </div>
-					        <div class="info-tag-container">
-					            <i class="fa fa-map-marker"></i>
-					        
-					                <h6 class="info-text">Cluj-Napoca Cluj</h6>
-					        </div>
-					        <div class="info-tag-container">
-					            <i class="fa fa-envelope-o"></i>
-					        
-					                <h6 class="info-text">dinu@ik.me</h6>
-					        </div>
-					        <div class="info-tag-container">
-					            <i class="fa fa-mobile"></i>
-					        
-					                <h6 class="info-text">0740408687</h6>
-					        </div>
-					
-					                        <div class="info-tag-container">
-					                            <i class="fa fa-linkedin-square"></i>
-					                        
-					                                <h6 class="info-text">
-					                                    <a href="https://www.linkedin.com/in/dinubalan/" target="_blank">
-					                                        in/dinubalan <i class="fa fa-external-link" aria-hidden="true"></i>
-					                                    </a>
-					                                </h6>
-					                        </div></section>
-					    <div class="skills-container">
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Macros</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <h4 class="bold">Intermediary</h4>
-					                    <ul class="minimal">
-					                            <li><h6>Visual Basic for Applications</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Java</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <h4 class="bold">Beginner</h4>
-					                    <ul class="minimal">
-					                            <li><h6>Core Java 8</h6></li>
-					                            <li><h6>Servlets/JSP</h6></li>
-					                            <li><h6>Spring</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Databases</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <h4 class="bold">Beginner</h4>
-					                    <ul class="minimal">
-					                            <li><h6>MySQL</h6></li>
-					                            <li><h6>Access</h6></li>
-					                            <li><h6>MongoDB</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Microsoft Office</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <h4 class="bold">Advanced</h4>
-					                    <ul class="minimal">
-					                            <li><h6>Excel</h6></li>
-					                            <li><h6>Word</h6></li>
-					                            <li><h6>Share-Point</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Robotic Process Automation (RPA)</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <h4 class="bold">Beginner</h4>
-					                    <ul class="minimal">
-					                            <li><h6>UiPath</h6></li>
-					                    </ul>
-					            </section>
-					    </div>
-					    <div class="container languages-container">
-					        <div class="title">
-					            <h3>Languages</h3>
-					            <div class="keyline"></div>
-					        </div>
-					        <ul class="minimal">
-					                <li>
-					                    <h6>Romanian <em>(Native Speaker)</em></h6>
-					                </li>
-					                <li>
-					                    <h6>English <em>(Fluent)</em></h6>
-					                </li>
-					        </ul>
-					    </div>
-				</aside>
-				<div class="right-column">
-					        <div class="container summary-container">
-					            <div class="title">
-					                <h3>Summary</h3>
-					                <div class="keyline"></div>
-					            </div>            <p class="summary">
-					                Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position.
-					            </p>
-					        </div>
-					<div class="container work-container">
-					    <div class="title">
-					        <h3>Experience</h3>
-					        <div class="keyline"></div>
-					    </div>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/210064" target="_blank">
-					                            Genpact <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">12/2020</span>
-					                        <span class="endDate"> - Present</span>
-					                </h5>
-					            </div>
-					            <h4>Process Automation Developer</h4>
-					
-					            <p class="summary">-Builds solutions using the technology appropriate for the given task:
-					    -VBA programming language
-					    -Office 365 applications (Excel, Access, Outlook, SharePoint, Power BI, Power Automate, Power Query)
-					    -Web &amp; SAP scripting
-					    -.NET
-					    -other
-					-Takes ownership for solution design, development, implementation, training, documentation and maintenance
-					-Identifies improvement opportunities to eliminate waste, automate manual work, standardize process
-					</p>
-					
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/210064" target="_blank">
-					                            Genpact <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">11/2019</span>
-					                        <span class="endDate"> - 12/2020</span>
-					                </h5>
-					            </div>
-					            <h4>Receivables Reporting Specialist</h4>
-					
-					            <p class="summary">-Data analysis and report preparation
-					-Process performance monitoring and forecasting
-					-Reporting framework governance and development
-					-Data mining, cleaning and visual presentation</p>
-					
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/210064" target="_blank">
-					                            Genpact <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">11/2018</span>
-					                        <span class="endDate"> - 11/2019</span>
-					                </h5>
-					            </div>
-					            <h4>Senior Financial Planning Analyst</h4>
-					
-					            <p class="summary">-Prepare internal reports for executive leadership and support their decision making.
-					-Create, update, and maintain financial models.
-					-Compare historical results against budgets and forecasts, and perform variance analysis.
-					-Implement and work with a Business Intelligence Tool and Dashboard reports.</p>
-					
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/210064" target="_blank">
-					                            GENPACT <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">08/2017</span>
-					                        <span class="endDate"> - 11/2018</span>
-					                </h5>
-					            </div>
-					            <h4>Senior General Ledger Process Associate </h4>
-					
-					            <p class="summary">-VAT reporting;
-					-B/S reconciliation and inconsistency mitigation on: services, freight, marketing and salary accounts;
-					-preparation and posting of the incoming journal entries;
-					-VBA developer of excel finance tools (e.g. trackers, journal entry error proofers, work allocation tools etc.)  </p>
-					
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/210064" target="_blank">
-					                            GENPACT <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">01/2017</span>
-					                        <span class="endDate"> - 08/2017</span>
-					                </h5>
-					            </div>
-					            <h4>Senior Accounts Payable Process Associate</h4>
-					
-					            <p class="summary">-payment preparation and execution activities
-					-help-desk
-					-sub-ledger account reconciliation
-					</p>
-					
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/9433099" target="_blank">
-					                            Software Development Academy <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">02/2019</span>
-					                        <span class="endDate"> - 11/2019</span>
-					                </h5>
-					            </div>
-					            <h4>Junior Java Developer Trainee</h4>
-					
-					            <p class="summary">-Developed in a team and individualy Java projects in gradual complexity ranges and focusing on OOP and SOLID principles.
-					-Good command of distributed version control systems (Git) gained through dedicated classes and independently.
-					-SQL and NoSQL (MySQL, MongoDB) know-how to support modern Java development requirements.
-					-Basic front-end involvment with HTML, CSS and Javascript through personal static web-pages.
-					</p>
-					
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://www.linkedin.com/company/4602" target="_blank">
-					                            Sykes Enterprises, Incorporated <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">09/2014</span>
-					                        <span class="endDate"> - 10/2015</span>
-					                </h5>
-					            </div>
-					            <h4>Customer Service Specialist</h4>
-					
-					            <p class="summary">-technical and informational customer support
-					-identification of critical problems and the escalation of those situations towards the responsible department
-					-incoming calls and e-mails handling
-					-incoming orders and payment details handling
-					-database operations</p>
-					
-					        </section>
-					</div>
-					<div class="container education-container">
-					    <div class="title">
-					        <h3>Education</h3>
-					        <div class="keyline"></div>
-					    </div>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        Universitatea „Babeș-Bolyai” din Cluj-Napoca
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">12/2011</span>
-					                        <span class="endDate"> - 12/2014</span>
-					                </h5>
-					            </div>
-					            <h4>Bachelor’s Degree Foreign Languages, Literatures, and Linguistics</h4>
-					
-					
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        Liceul Radu Petrescu
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">12/2009</span>
-					                        <span class="endDate"> - 12/2011</span>
-					                </h5>
-					            </div>
-					            <h4>High School Mathematics and Computer Science</h4>
-					
-					
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        Colegiul National Militar Mihai Viteazul
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">12/2007</span>
-					                        <span class="endDate"> - 12/2009</span>
-					                </h5>
-					            </div>
-					            <h4>Mathematics and Computer Science</h4>
-					
-					
-					        </section>
-					</div>
-				</div>
-			</div>
-		</main>
-	</body>
+	  <main class="grey darken-4 white-text">
+      <article class="white black-text">
+        
+        <header class="valign-wrapper grey darken-4 white-text">
+          <div class="container">
+              <h1>Dinu Bălan</h1>
+              <h4>Process Automation Developer at Genpact looking for a coding challenge.</h4>
+          </div>
+        </header>
+        <section id="basics" class="valign-wrapper">
+          <div class="container">
+            <div id="summary">
+              <h2>Profile</h2>
+              <div>Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position.</div>
+            </div>
+        
+            <div id="skills">
+              <h2>Skills</h2>
+              <ul class="row">
+                <li class="col s12 m4 l3">
+                  <div class="caption">Macros</div>
+                  <ul>
+                      <li>Visual Basic for Applications</li>
+                  </ul>      
+                </li>
+                <li class="col s12 m4 l3">
+                  <div class="caption">Java</div>
+                  <ul>
+                      <li>Core Java 8</li>
+                      <li>Servlets/JSP</li>
+                      <li>Spring</li>
+                  </ul>      
+                </li>
+                <li class="col s12 m4 l3">
+                  <div class="caption">Databases</div>
+                  <ul>
+                      <li>MySQL</li>
+                      <li>Access</li>
+                      <li>MongoDB</li>
+                  </ul>      
+                </li>
+                <li class="col s12 m4 l3">
+                  <div class="caption">Microsoft Office</div>
+                  <ul>
+                      <li>Excel</li>
+                      <li>Word</li>
+                      <li>Share-Point</li>
+                  </ul>      
+                </li>
+                <li class="col s12 m4 l3">
+                  <div class="caption">Robotic Process Automation (RPA)</div>
+                  <ul>
+                      <li>UiPath</li>
+                  </ul>      
+                </li>
+              </ul>
+            </div>
+        
+              <div id="languages">
+                <h2>Languages</h2>
+                <ul class="languages">
+                  <li class="language">
+                    <div>Romanian</div>
+                    <div>Native Speaker</div>
+                  </li>
+                  <li class="language">
+                    <div>English</div>
+                    <div>Fluent</div>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </section>        <section id="work">
+          <div class="container" class="valign-wrapper">
+            <h2>Work</h2>
+            <ul>
+              <li>
+                <h4></h4>
+                <div class="caption">
+                  <span>Process Automation Developer</span> | 
+                  <time datetime="2020-12-31">Dec 2020</time> - <time datetime="Fri Aug 12 2022 06:24:15 GMT+0000 (Coordinated Universal Time)">present</time>
+                </div>
+              </li>
+              <li>
+                <h4></h4>
+                <div class="caption">
+                  <span>Receivables Reporting Specialist</span> | 
+                  <time datetime="2019-11-30">Nov 2019</time> - <time datetime="2020-12-31">Dec 2020</time>
+                </div>
+              </li>
+              <li>
+                <h4></h4>
+                <div class="caption">
+                  <span>Senior Financial Planning Analyst</span> | 
+                  <time datetime="2018-11-30">Nov 2018</time> - <time datetime="2019-11-30">Nov 2019</time>
+                </div>
+              </li>
+              <li>
+                <h4></h4>
+                <div class="caption">
+                  <span>Senior General Ledger Process Associate </span> | 
+                  <time datetime="2017-08-31">Aug 2017</time> - <time datetime="2018-11-30">Nov 2018</time>
+                </div>
+              </li>
+              <li>
+                <h4></h4>
+                <div class="caption">
+                  <span>Senior Accounts Payable Process Associate</span> | 
+                  <time datetime="2017-01-31">Jan 2017</time> - <time datetime="2017-08-31">Aug 2017</time>
+                </div>
+              </li>
+              <li>
+                <h4></h4>
+                <div class="caption">
+                  <span>Junior Java Developer Trainee</span> | 
+                  <time datetime="2019-02-28">Feb 2019</time> - <time datetime="2019-11-30">Nov 2019</time>
+                </div>
+              </li>
+              <li>
+                <h4></h4>
+                <div class="caption">
+                  <span>Customer Service Specialist</span> | 
+                  <time datetime="2014-09-30">Sep 2014</time> - <time datetime="2015-10-31">Oct 2015</time>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="education" class="valign-wrapper">
+          <div class="container">
+            <h2>Education</h2>
+            <ul>
+              <li>
+                <h4>Universitatea „Babeș-Bolyai” din Cluj-Napoca</h4>
+                <div class="caption">
+                  Foreign Languages, Literatures, and Linguistics | 
+                  Dec 2011 - Dec 2014
+                </div>
+              </li>
+              <li>
+                <h4>Liceul Radu Petrescu</h4>
+                <div class="caption">
+                  Mathematics and Computer Science | 
+                  Dec 2009 - Dec 2011
+                </div>
+              </li>
+              <li>
+                <h4>Colegiul National Militar Mihai Viteazul</h4>
+                <div class="caption">
+                  Mathematics and Computer Science | 
+                  Dec 2007 - Dec 2009
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      <footer class="grey darken-4 white-text">
+        <div class="container">
+          
+            <ul class="row center inline">
+                <li><a href="https://www.linkedin.com/in/dinubalan/" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+          <ul class="row center inline inline-delimited">
+            <li><a href="#basics">Profile</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#languages">Languages</a></li>
+            
+            <li><a href="#work">Work</a></li>
+            
+            <li><a href="#education">Education</a></li>
+            
+            
+            
+            
+            
+          </ul>
+          <div class="row center">
+            &copy; 2022 Dinu Bălan
+          </div>
+        </div>
+      </footer>      <div class="menu" role="navigation" aria-label="primary">
+        <div>
+          <ul>
+            
+            <li><a href="mailto:dinu@ik.me"><i class="fas fa-envelope"></i></a></li>
+            
+              
+                <li><a href="https://www.linkedin.com/in/dinubalan/" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+              
+          </ul>
+        </div>
+      </div>    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/js/all.min.js" integrity="sha512-LW9+kKj/cBGHqnI4ok24dUWNR/e8sUD8RLzak1mNw5Ja2JYCmTXJTF5VpgFSw+VoBfpMvPScCo2DnKTIUjrzYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>(function() {
+  'use strict';
+  var ContactForm = {
+    init: function() {
+      document.querySelectorAll('form.contact-form').forEach(function(form) {
+        function hide(selector) {
+          form.querySelectorAll(selector).forEach(function(element) {
+            element.style.visibility = 'hidden';
+          });
+        }
+        function show(selector) {
+          form.querySelectorAll(selector).forEach(function(element) {
+            element.style.visibility = 'visible';
+          });
+        }
+        function clear(selector) {
+          form.querySelectorAll(selector).forEach(function(element) {
+            element.value = '';
+          });
+        }
+        form.onsubmit = async function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          hide('.error');
+          hide('.success');
+          var body = new FormData();
+          body.append("subject", "Contact Form");
+          body.append("from", e.target.from.value);
+          body.append("name",  e.target.name.value);
+          body.append("message", e.target.message.value);
+          var response = await fetch(e.target.action, { method: e.target.method || 'POST', body });
+          if (response.status >= 400) {
+            console.error(await response.json());
+            hide('.success');
+            show('.error');
+          } else {
+            hide('.error');
+            show('.success');
+            window.setTimeout(function() {
+              hide('.success, .error');
+              clear('input, textarea');
+            }, 5000);
+          }
+          return false;
+        }; 
+      });
+    }
+  };
+
+  ContactForm.init();
+  M.AutoInit();
+})();</script>
+    <div id="ie-notice">
+        <div>You seem to be using Internet Explorer and this site will not look quite right in it. In fact it will probably not work at all. Please consider updating to a modern browser:</div>
+        <div><a href="https://www.microsoft.com/en-us/edge?r=1">Edge</a> | <a href="https://www.google.com/chrome/">Chrome</a> | <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> | <a href="https://support.apple.com/en-us/HT204416">Safari</a> | <a href="https://brave.com/">Brave</a> | <a href="https://www.opera.com/">Opera</a></div> 
+    </div>
+    <script>
+    if (/MSIE|Trident/.test(window.navigator.userAgent)) {
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('ie-notice').style.display = 'block';
+        });
+    }
+    </script>	</body>
 </html>
