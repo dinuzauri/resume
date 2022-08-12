@@ -2,10 +2,10 @@
     "basics": {
         "name": "Dinu Bălan",
         "label": "Process Automation Developer at Genpact looking for a coding challenge.",
-        "picture": "",
+        "picture": "https://images2.imgbox.com/b9/9e/laHASIvK_o.png",
         "email": "dinu@ik.me",
         "phone": "0740408687",
-        "website": "",
+        "website": "https://dinuBC.github.io/resume",
         "summary": "Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position.",
         "location": {
             "countryCode": "RO",
@@ -17,7 +17,9 @@
                 "network": "LinkedIn",
                 "username": "dinubalan",
                 "url": "https://www.linkedin.com/in/dinubalan/"
-            }
+            },
+            {"network":"GitHub","username":"dinuBC","url":"https://github.com/dinuBC/"}
+        ]
         ]
     },
     "work": [
