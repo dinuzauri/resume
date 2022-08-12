@@ -18,8 +18,11 @@
                 "username": "dinubalan",
                 "url": "https://www.linkedin.com/in/dinubalan/"
             },
-            {"network":"GitHub","username":"dinuBC","url":"https://github.com/dinuBC/"}
-        ]
+            {
+                "network": "GitHub",
+                "username": "dinuBC",
+                "url": "https://github.com/dinuBC/"
+            }
         ]
     },
     "work": [
