@@ -1,0 +1,175 @@
+{
+    "basics": {
+      "name": "Dinu Bălan",
+      "label": "Process Automation Developer at Genpact looking for a coding challenge.",
+      "picture": "",
+      "email": "dinu@ik.me",
+      "phone": "0740408687",
+      "website": "",
+      "summary": "Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position.",
+      "location": {
+        "countryCode": "RO",
+        "city": "Cluj-Napoca",
+        "region": "Cluj"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "dinubalan",
+          "url": "https://www.linkedin.com/in/dinubalan/"
+        }
+      ]
+    },
+    "work": [
+      {
+        "company": "Genpact",
+        "endDate": "",
+        "highlights": [],
+        "position": "Process Automation Developer",
+        "startDate": "2020-12-31",
+        "summary": "-Builds solutions using the technology appropriate for the given task:\n    -VBA programming language\n    -Office 365 applications (Excel, Access, Outlook, SharePoint, Power BI, Power Automate, Power Query)\n    -Web & SAP scripting\n    -.NET\n    -other\n-Takes ownership for solution design, development, implementation, training, documentation and maintenance\n-Identifies improvement opportunities to eliminate waste, automate manual work, standardize process\n",
+        "website": "https://www.linkedin.com/company/210064"
+      },
+      {
+        "company": "Genpact",
+        "endDate": "2020-12-31",
+        "highlights": [],
+        "position": "Receivables Reporting Specialist",
+        "startDate": "2019-11-30",
+        "summary": "-Data analysis and report preparation\n-Process performance monitoring and forecasting\n-Reporting framework governance and development\n-Data mining, cleaning and visual presentation",
+        "website": "https://www.linkedin.com/company/210064"
+      },
+      {
+        "company": "Genpact",
+        "endDate": "2019-11-30",
+        "highlights": [],
+        "position": "Senior Financial Planning Analyst",
+        "startDate": "2018-11-30",
+        "summary": "-Prepare internal reports for executive leadership and support their decision making.\n-Create, update, and maintain financial models.\n-Compare historical results against budgets and forecasts, and perform variance analysis.\n-Implement and work with a Business Intelligence Tool and Dashboard reports.",
+        "website": "https://www.linkedin.com/company/210064"
+      },
+      {
+        "company": "GENPACT",
+        "endDate": "2018-11-30",
+        "highlights": [],
+        "position": "Senior General Ledger Process Associate ",
+        "startDate": "2017-08-31",
+        "summary": "-VAT reporting;\n-B/S reconciliation and inconsistency mitigation on: services, freight, marketing and salary accounts;\n-preparation and posting of the incoming journal entries;\n-VBA developer of excel finance tools (e.g. trackers, journal entry error proofers, work allocation tools etc.)  ",
+        "website": "https://www.linkedin.com/company/210064"
+      },
+      {
+        "company": "GENPACT",
+        "endDate": "2017-08-31",
+        "highlights": [],
+        "position": "Senior Accounts Payable Process Associate",
+        "startDate": "2017-01-31",
+        "summary": "-payment preparation and execution activities\n-help-desk\n-sub-ledger account reconciliation\n",
+        "website": "https://www.linkedin.com/company/210064"
+      },
+      {
+        "company": "Software Development Academy",
+        "endDate": "2019-11-30",
+        "highlights": [],
+        "position": "Junior Java Developer Trainee",
+        "startDate": "2019-02-28",
+        "summary": "-Developed in a team and individualy Java projects in gradual complexity ranges and focusing on OOP and SOLID principles.\n-Good command of distributed version control systems (Git) gained through dedicated classes and independently.\n-SQL and NoSQL (MySQL, MongoDB) know-how to support modern Java development requirements.\n-Basic front-end involvment with HTML, CSS and Javascript through personal static web-pages.\n",
+        "website": "https://www.linkedin.com/company/9433099"
+      },
+      {
+        "company": "Sykes Enterprises, Incorporated",
+        "endDate": "2015-10-31",
+        "highlights": [],
+        "position": "Customer Service Specialist",
+        "startDate": "2014-09-30",
+        "summary": "-technical and informational customer support\n-identification of critical problems and the escalation of those situations towards the responsible department\n-incoming calls and e-mails handling\n-incoming orders and payment details handling\n-database operations",
+        "website": "https://www.linkedin.com/company/4602"
+      }
+    ],
+    "volunteer": [],
+    "education": [
+      {
+        "institution": "Universitatea „Babeș-Bolyai” din Cluj-Napoca",
+        "area": "Foreign Languages, Literatures, and Linguistics",
+        "studyType": "Bachelor’s Degree",
+        "startDate": "2011-12-31",
+        "endDate": "2014-12-31",
+        "gpa": "",
+        "courses": []
+      },
+      {
+        "institution": "Liceul Radu Petrescu",
+        "area": "Mathematics and Computer Science",
+        "studyType": "High School",
+        "startDate": "2009-12-31",
+        "endDate": "2011-12-31",
+        "gpa": "",
+        "courses": []
+      },
+      {
+        "institution": "Colegiul National Militar Mihai Viteazul",
+        "area": "Mathematics and Computer Science",
+        "studyType": "",
+        "startDate": "2007-12-31",
+        "endDate": "2009-12-31",
+        "gpa": "",
+        "courses": []
+      }
+    ],
+    "awards": [],
+    "publications": [],
+    "skills": [
+      {
+        "name": "Macros",
+        "level": "Intermediary",
+        "keywords": [
+          "Visual Basic for Applications"
+        ]
+      },
+      {
+        "name": "Java",
+        "level": "Beginner",
+        "keywords": [
+          "Core Java 8",
+          "Servlets/JSP",
+          "Spring"
+        ]
+      },
+      {
+        "name": "Databases",
+        "level": "Beginner",
+        "keywords": [
+          "MySQL",
+          "Access",
+          "MongoDB"
+        ]
+      },
+      {
+        "name": "Microsoft Office",
+        "level": "Advanced",
+        "keywords": [
+          "Excel",
+          "Word",
+          "Share-Point"
+        ]
+      },
+      {
+        "name": "Robotic Process Automation (RPA)",
+        "level": "Beginner",
+        "keywords": [
+          "UiPath"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "language": "Romanian",
+        "fluency": "Native Speaker"
+      },
+      {
+        "language": "English",
+        "fluency": "Fluent"
+      }
+    ],
+    "interests": [],
+    "references": []
+  }
