@@ -29,8 +29,7 @@
         {
             "company": "3Pillar Global",
             "endDate": "2022-02-01",
-            "highlights": [
-            ],
+            "highlights": [],
             "position": "Apprentice Quality Assurance Engineer",
             "startDate": "2021-08-19",
             "summary": "Lorem Ipsum",
@@ -54,7 +53,7 @@
             "highlights": [
                 "Developed an employee individual performance monitoring for better process health tracking",
                 "Upskilled data mining and analysis abilities through constant training and day-to-day data-analytics-practices exposure"
-              ],
+            ],
             "position": "Receivables Reporting Specialist",
             "startDate": "2019-11-30",
             "summary": "KPI monitoring and reporting for a team of 30 employees. Responsible of designing and maintaining the reporting framework through data mining and dashboards creation (Power Bi)",
@@ -106,15 +105,17 @@
             "website": "https://www.linkedin.com/company/4602"
         }
     ],
-    "volunteer": [{
-        "organization": "Romanian Testing Conference",
-        "position": "Volunteer Staff",
-        "url": "https://www.linkedin.com/company/romanian-testing-conference/",
-        "startDate": "2022-06-01",
-        "endDate": "",
-        "summary": "Description…",
-        "highlights": []
-      }],
+    "volunteer": [
+        {
+            "organization": "Romanian Testing Conference",
+            "position": "Volunteer Staff",
+            "url": "https://www.linkedin.com/company/romanian-testing-conference/",
+            "startDate": "2022-06-01",
+            "endDate": "",
+            "summary": "Description…",
+            "highlights": []
+        }
+    ],
     "education": [
         {
             "institution": "Universitatea „Babeș-Bolyai” din Cluj-Napoca",
@@ -146,12 +147,14 @@
     ],
     "awards": [],
     "publications": [],
-    "certificates": [{
-        "name": "ISTQB Certified Tester, Foundation Level",
-        "date": "2021-12-18",
-        "issuer": "Association for Testing & Software Quality Assurence",
-        "url": "https://atsqa.org/certified-testers/profile/7409a059efba4a25aa5676426664af98"
-      }],
+    "certificates": [
+        {
+            "name": "ISTQB Certified Tester, Foundation Level",
+            "date": "2021-12-18",
+            "issuer": "Association for Testing & Software Quality Assurence",
+            "url": "https://atsqa.org/certified-testers/profile/7409a059efba4a25aa5676426664af98"
+        }
+    ],
     "skills": [
         {
             "name": "Macros",
