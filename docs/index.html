@@ -1,12 +1,14 @@
 <!doctype html>
-<html>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Dinu Bălan</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-  <style>
-  /********************************************
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	<title>Dinu Bălan</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+				integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+	<style>
+		/********************************************
 * 	reset from
 * 	http://meyerweb.com/eric/tools/css/reset/
 *******************************************/
@@ -88,6 +90,7 @@ output,
 ruby,
 section,
 summary,
+description,
 time,
 mark,
 audio,
@@ -152,6 +155,7 @@ html {
   letter-spacing: 0;
   line-height: 1.46153846;
   text-align: left;
+  -webkit-text-size-adjust: 100%;
 }
 
 p {
@@ -176,6 +180,18 @@ li {
 
 h1 {
   font-size: 2rem;
+}
+
+h1 a {
+  display: inline;
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: "freight-sans-pro", lato, sans-serif;
+  vertical-align: middle;
+}
+
+h1 a:hover {
+  cursor: pointer;
 }
 
 h2 {
@@ -224,8 +240,8 @@ section .location {
   padding: 0;
 }
 
-#header > #profiles,
-#header > #contact,
+#header>#profiles,
+#header>#contact,
 #skills,
 #languages,
 #interests {
@@ -236,21 +252,21 @@ section .location {
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
-#header > div {
+#header>div {
   line-height: 1.5;
 }
 
-#header > div > div {
+#header>div>div {
   margin-right: 1.2em;
 }
 
 #header h1.name {
   font-size: 2.8rem;
-  font-weight: 100;
+  font-weight: 700;
   line-height: 100%;
 }
 
@@ -269,7 +285,7 @@ section .location {
 .main-summary {
   background: #f1f8ff;
   padding: 1.2em 1em;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 .main-summary p {
@@ -287,7 +303,7 @@ section .location {
   font-size: 0.9rem;
 }
 
-.section > header {
+.section>header {
   position: relative;
 }
 
@@ -295,7 +311,7 @@ section .location {
   margin-right: 0.25em;
 }
 
-.section > header::after {
+.section>header::after {
   position: absolute;
   left: 0;
   top: 0.7em;
@@ -307,21 +323,21 @@ section .location {
   display: block;
 }
 
-.section.main-summary > section {
+.section.main-summary>section {
   margin: 0;
 }
 
-.section > section > header {
+.section>section>header {
   font-size: 1.38rem;
   position: relative;
   margin-top: 0.7em;
 }
 
-.section > section > header:first-of-type {
+.section>section>header:first-of-type {
   margin: 0;
 }
 
-.section > section > header .space-left {
+.section>section>header .space-left {
   position: absolute;
   left: -1.56rem;
   top: 5px;
@@ -330,8 +346,10 @@ section .location {
   opacity: 0;
 }
 
+.project,
 .position,
 .company,
+.roles,
 .organization,
 .institution,
 .date,
@@ -342,6 +360,7 @@ section .location {
   display: inline;
 }
 
+.project,
 .position,
 .studyType,
 .area,
@@ -358,7 +377,16 @@ section .location {
   content: "at ";
 }
 
+.roles::before {
+  content: "as "
+}
+
+.area::before {
+  content: "in "
+}
+
 .company,
+.roles,
 .institution,
 .organization,
 .awarder {
@@ -401,7 +429,7 @@ section .location {
   margin: 1em 0 0 0;
 }
 
-.highlights > li > p {
+.highlights>li>p {
   margin-bottom: 0.5em;
 }
 
@@ -409,7 +437,7 @@ section .location {
   overflow: hidden;
 }
 
-.gpa {
+.score {
   clear: both;
   padding-bottom: 0.5em;
 }
@@ -572,8 +600,12 @@ section .location {
   border-left: 5px solid #ff6d1f;
 }
 
-.section > section > section {
-  margin-bottom: 1rem;
+.toggle-item {
+  display: none;
+}
+
+.section>section>section {
+  margin-bottom: 0.5rem;
 }
 
 /******************
@@ -600,6 +632,7 @@ section .location {
     width: 80%;
     margin: 0 auto;
   }
+
   .section header .date {
     float: right;
     font-weight: 600;
@@ -615,43 +648,88 @@ section .location {
   li {
     margin-left: 1.5em;
   }
+
   #resume {
     width: 820px;
     margin: 2rem auto;
   }
-  .section > section > header .space-left {
+
+  .section>section>header .space-left {
     opacity: 1;
     cursor: pointer;
   }
-  .section > section:not(.main-summary) {
+
+  .section>section:not(.main-summary) {
     margin-left: 1.67rem;
   }
+
+  .toggle-item {
+    transform: translate(-9999px);
+  }
+
+  .toggle-item+label {
+    display: block;
+  }
+
+  .toggle-item:checked+label:after {
+    content: "\f0d7";
+  }
+
+  .toggle-item+label:after {
+    float: left;
+    cursor: pointer;
+    margin-left: -20px;
+    color: #aaa;
+    font-size: 16px;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    content: "\f0da";
+  }
+
+  .toggle-item~.item {
+    height: 0;
+    opacity: 0;
+  }
+
+  .toggle-item:checked~.item {
+    height: auto;
+    opacity: 1;
+    transition: all 0.5s linear;
+  }
+
   .company::before,
+  .roles::before,
+  .area::before,
   .institution::before,
   .organization::before,
   .awarder::before {
     content: "| ";
   }
+
   .header-left {
     float: left;
     width: 70%;
     word-break: normal;
   }
+
   .section header .date {
     padding: 0.2em;
   }
+
   .display {
     display: none;
   }
+
   .display:not(.none) {
     display: block;
   }
 }
 
 @media print {
-  #profiles a:not(.hide-href-print)::after{
+  a:not(.hide-href-print)::after {
     content: " (" attr(href) ") ";
   }
+
   #resume {
     margin: 0.1em;
     padding: 0.1em;
@@ -659,51 +737,69 @@ section .location {
     word-wrap: break-word;
     line-height: 1.25;
   }
+
   @page {
     margin: 1cm 1.4cm;
   }
+
   .item-count {
     display: none;
   }
+
   .company::before,
   .institution::before,
   .organization::before,
   .awarder::before {
     content: "at ";
   }
+
+  .roles::before {
+    content: "as "
+  }
+
   .main-summary {
     padding: 0;
     background: transparent;
   }
+
   .section {
     margin: 0.8rem 0;
     padding: 0;
   }
+
   .section header {
     padding-bottom: 0.15rem;
   }
+
   .section .location {
     padding-bottom: 0.15rem;
   }
-  .section > section > section {
+
+  .section>section>section {
     margin: 0 0 1em 0;
   }
-  .section > section > section:last-of-type {
+
+  .section>section>section:last-of-type {
     margin: 0;
   }
+
   .stack-overflow::after {
     content: "";
   }
+
   .fa.social {
     color: #828386;
   }
+
   ul {
     margin-top: 0.4em;
   }
+
   ul,
   li {
     padding: 0;
   }
+
   ul.keywords li,
   ul.courses li {
     margin: 0;
@@ -711,442 +807,464 @@ section .location {
     font-size: 0.8rem;
     background: transparent;
   }
+
   ul.keywords li::after,
   ul.courses li::after {
     padding: 0 0 0 0.1rem;
     content: " |";
   }
+
   ul.keywords::before,
   ul.courses::before {
     font-size: 0.8rem;
     font-weight: 600;
   }
+
   #skills .item {
     width: calc(100% / 3);
     padding: 0;
   }
+
   .highlights {
     margin: 0.5em 0 0 0;
   }
+
   ul.keywords::before {
     content: "Skills acquired: ";
   }
+
   #skills .keywords::before {
     content: none;
   }
+
   .section p {
     margin: 0;
     padding: 0;
   }
+
   ul.courses::before {
     content: "Major courses: ";
   }
+
   ul.keywords li:last-of-type::after,
   ul.courses li:last-of-type::after {
     content: "";
   }
+
   .level em {
     font-style: normal;
     padding: 0.1em 0;
   }
+
   .level .bar {
     display: none;
   }
+
   #profiles .item {
     padding: 0;
   }
+
   .item.display {
     display: block;
     opacity: 1 !important;
   }
+
   .fa-map-marker-alt:before {
     padding-left: 0.1em;
   }
 }
+	</style>
 
-  </style>
-  
-  </head>
-  <body>
-  
-  <div id="resume">
-    	<header id="header" class="clear">
-    		<div>
-    			<h1 class="name">Dinu Bălan</h1>
-    			<h2 class="label">Process Automation Developer at Genpact looking for a coding challenge.</h2>
-    		</div>
-    
-    		<span class="location">
-    			<span class="city">Floresti,</span>
-    			<span class="region">Cluj</span>
-    			<span class="countryCode">RO</span>
-    		</span>
-    
-    
-    		<div id="contact">
-    			<div class="website">
-    				<span class="fas fa-external-link-alt"></span>
-    				<a class="hide-href-print" target="_blank" target="_blank" href="https://dinuBC.github.io/resume">https://dinuBC.github.io/resume</a>
-    			</div>
-    			<div class="email">
-    				<span class="far fa-envelope"></span>
-    				<a class="hide-href-print" href="mailto:dinu@ik.me">dinu@ik.me</a>
-    			</div>
-    			<div class="phone">
-    				<span class="fas fa-mobile-alt"></span>
-    				<a class="hide-href-print" href="tel:0740408687">0740408687</a>
-    			</div>
-    		</div>
-    
-    		<div id="profiles">
-    			<div class="item">
-    				<div class="username">
-    					<span class="fab fa-linkedin linkedin social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://www.linkedin.com/in/dinubalan/">dinubalan</a>
-    					</span>
-    				</div>
-    			</div>
-    			<div class="item">
-    				<div class="username">
-    					<span class="fab fa-github github social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://github.com/dinuBC/">dinuBC</a>
-    					</span>
-    				</div>
-    			</div>
-    		</div>
-    	</header>
-    
-    	<section class="section">
-    		<section class="main-summary">
-    			<div><p><p>Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position.</p></p></div>
-    		</section>
-    	</section>
-    
-    <section class="section">
-    	<header>
-    		<h2 class='section-title'>Skills</h2>
-    	</header>
-    	<section id="skills">
-    		<div class="item">
-    			<h3 class="name">
-    				Macros
-    			</h3>
-    			 
-    			<div class="level intermediary">
-    				<em>Intermediary</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Visual Basic for Applications</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Java
-    			</h3>
-    			 
-    			<div class="level beginner">
-    				<em>Beginner</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Core Java 8</li>
-    				<li>Servlets/JSP</li>
-    				<li>Spring</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Databases
-    			</h3>
-    			 
-    			<div class="level beginner">
-    				<em>Beginner</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>MySQL</li>
-    				<li>Access</li>
-    				<li>MongoDB</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Microsoft Office
-    			</h3>
-    			 
-    			<div class="level advanced">
-    				<em>Advanced</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>Excel</li>
-    				<li>Word</li>
-    				<li>Share-Point</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Robotic Process Automation (RPA)
-    			</h3>
-    			 
-    			<div class="level beginner">
-    				<em>Beginner</em>
-    				<div class="bar"></div>
-    			</div>
-    			<ul class="keywords">
-    				<li>UiPath</li>
-    			</ul>
-    		</div>
-    	</section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Work Experience <span class="item-count">(8)</span></h2>
-      </header>
-    
-      <section id="work">
-        <section class="work-item">
-    
-           <div class="item" id="work-item">
-            <div class="summary"><p><p>Lorem Ipsum</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-    
-           <div class="item" id="work-item">
-            <div class="summary"><p><p>Responsible for identifying improvement opportunities to eliminate waste, automate manual work and standardize processes. Took ownership for solution design, development, implementation, documentation and maintenance of automation projects.</p></p></div>
-            <ul class="highlights">
-              <li><p><p>Over 20 automation projects delivered, reducing over 150 hours per year of manual work</p></p></li>
-              <li><p><p>Upskilling through delivered projects mainly based on Microsoft technologies: Power Automate, Microsoft Flow, Sharepoint etc.</p></p></li>
-            </ul>
-          </div>
-        </section>
-        <section class="work-item">
-    
-           <div class="item" id="work-item">
-            <div class="summary"><p><p>KPI monitoring and reporting for a team of 30 employees. Responsible of designing and maintaining the reporting framework through data mining and dashboards creation (Power Bi)</p></p></div>
-            <ul class="highlights">
-              <li><p><p>Developed an employee individual performance monitoring for better process health tracking</p></p></li>
-              <li><p><p>Upskilled data mining and analysis abilities through constant training and day-to-day data-analytics-practices exposure</p></p></li>
-            </ul>
-          </div>
-        </section>
-        <section class="work-item">
-    
-           <div class="item" id="work-item">
-            <div class="summary"><p><p>-Prepare internal reports for executive leadership and support their decision making.</p><p>-Create, update, and maintain financial models.</p><p>-Compare historical results against budgets and forecasts, and perform variance analysis.</p><p>-Implement and work with a Business Intelligence Tool and Dashboard reports.</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-    
-           <div class="item" id="work-item">
-            <div class="summary"><p><p>-VAT reporting;</p><p>-B/S reconciliation and inconsistency mitigation on: services, freight, marketing and salary accounts;</p><p>-preparation and posting of the incoming journal entries;</p><p>-VBA developer of excel finance tools (e.g. trackers, journal entry error proofers, work allocation tools etc.)</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-    
-           <div class="item" id="work-item">
-            <div class="summary"><p><p>-payment preparation and execution activities</p><p>-help-desk</p><p>-sub-ledger account reconciliation</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-    
-           <div class="item" id="work-item">
-            <div class="summary"><p><p>-Developed in a team and individualy Java projects in gradual complexity ranges and focusing on OOP and SOLID principles.</p><p>-Good command of distributed version control systems (Git) gained through dedicated classes and independently.</p><p>-SQL and NoSQL (MySQL, MongoDB) know-how to support modern Java development requirements.</p><p>-Basic front-end involvment with HTML, CSS and Javascript through personal static web-pages.</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-    
-           <div class="item" id="work-item">
-            <div class="summary"><p><p>-technical and informational customer support</p><p>-identification of critical problems and the escalation of those situations towards the responsible department</p><p>-incoming calls and e-mails handling</p><p>-incoming orders and payment details handling</p><p>-database operations</p></p></div>
-          </div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Volunteer</h2>
-      </header>
-      <section id="volunteer">
-        <section class="volunteer-item">
-    
-          <label for="volunteer-item-0"></label>
-    
-          <header class="clear">
-             <div class="date">
-              <span class="startDate">
-                Jun 2022
-              </span>
-              <span class="endDate">
-                - Current
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="position">
-                Volunteer Staff
-              </div>
-              <div class="organization">
-                Romanian Testing Conference
-              </div>
-            </div>
-           
-          </header>
-          <div class="item">
-            <div class="summary"><p><p>Description…</p></p></div>
-          </div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Education <span class="item-count">(3)</span></h2>
-      </header>
-    
-      <section id="education">
-        <section class="education-item">
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">
-              2011
-              </span>
-              <span class="endDate">
-              - 2014
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="studyType">
-                Bachelor’s Degree
-              </div>
-              <div class="area">
-                Foreign Languages, Literatures, and Linguistics
-              </div>
-              <div class="institution">
-                Universitatea „Babeș-Bolyai” din Cluj-Napoca
-              </div>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-        <section class="education-item">
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">
-              2009
-              </span>
-              <span class="endDate">
-              - 2011
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="studyType">
-                High School
-              </div>
-              <div class="area">
-                Mathematics and Computer Science
-              </div>
-              <div class="institution">
-                Liceul Radu Petrescu
-              </div>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-        <section class="education-item">
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">
-              2007
-              </span>
-              <span class="endDate">
-              - 2009
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="area">
-                Mathematics and Computer Science
-              </div>
-              <div class="institution">
-                Colegiul National Militar Mihai Viteazul
-              </div>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-      </section>
-    </section>
-      <section class="section">
-        <header>
-          <h2 class="section-title">Certificates</h2>
-        </header>
-        <section id="certificates">
-            <section class="certificate-item">
-              <header class="clear">
-                  <div class="date">
-                    2021-12-18
-                  </div>
-                <div class="header-left">
-                    <div class="name">
-                      ISTQB Certified Tester, Foundation Level
-                    </div>
-                    <div class="issuer">
-                      Association for Testing &amp; Software Quality Assurence
-                    </div>
-                </div>
-              </header>
-    
-              <div class="item">
-                  <span class="url">
-                    <span class="fas fa-external-link-alt"></span>
-                    <a target="_blank" href="https://atsqa.org/certified-testers/profile/7409a059efba4a25aa5676426664af98">https://atsqa.org/certified-testers/profile/7409a059efba4a25aa5676426664af98</a>
-                  </span>
-              </div>
-            </section>
-        </section>
-      </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Languages</h2>
-      </header>
-      <section id="languages">
-        <div class="display">
-          <h3 class="language">
-            Romanian
-          </h3>
-          <div class="item">
-            <div class="level fluency native speaker">
-              <em>Native Speaker</em>
-              <div class="bar"></div>
-            </div>
-          </div>
-        </div>
-        <div class="display">
-          <h3 class="language">
-            English
-          </h3>
-          <div class="item">
-            <div class="level fluency fluent">
-              <em>Fluent</em>
-              <div class="bar"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
+</head>
+<body>
 
-  </body>
+<div id="resume">
+	  <header id="header" class="clear">
+	
+	      <div>
+	        <h1 class="name">Dinu Bălan<a href="https://github.com/IsFilimonov/jsonresume-theme-fullmoon" target="_blank">🌑🌕</a></h1>
+	        <h2 class="label">Process Automation Developer at Genpact looking for a coding challenge.</h2>
+	      </div>
+	
+	      <span class="location fas fa-map-marker-alt">
+	
+	
+	
+	          <span class="city">Floresti,</span>
+	
+	          <span class="region">Cluj,</span>
+	
+	          <span class="countryCode">RO</span>
+	      </span>
+	
+	
+	    
+	
+	    <div id="contact">
+	        <div class="email">
+	          <span class="far fa-envelope"></span>
+	          <a class="hide-href-print" href="mailto:dinu@ik.me">dinu@ik.me</a>
+	        </div>
+	        <div class="phone">
+	          <span class="fas fa-mobile-alt"></span>
+	          <a class="hide-href-print" href="tel:0740408687">0740408687</a>
+	        </div>
+	    </div>
+	
+	      <div id="profiles">
+	
+	            <div class="item">
+	
+	                <div class="username">
+	                  <span
+	                    class="fab fa-linkedin
+	                      linkedin
+	                      social"
+	                  ></span>
+	                    <span class="url">
+	                      <a target="_blank" href="https://www.linkedin.com/in/dinubalan/">dinubalan</a>
+	                    </span>
+	                </div>
+	
+	
+	
+	            </div>
+	            <div class="item">
+	
+	                <div class="username">
+	                  <span
+	                    class="fab fa-github
+	                      github
+	                      social"
+	                  ></span>
+	                    <span class="url">
+	                      <a target="_blank" href="https://github.com/dinuBC/">dinuBC</a>
+	                    </span>
+	                </div>
+	
+	
+	
+	            </div>
+	      </div>
+	  </header>
+	
+	    <section class="section">
+	      <section class="main-summary">
+	        <div>
+	          <p>Experienced professional with heavy Microsoft VBA scripting background looking to switch careers towards a more coding-focused position.</p>
+	        </div>
+	      </section>
+	    </section>
+	
+		<section class="section">
+			<header>
+				<h2 class='section-title'>Skills</h2>
+			</header>
+	
+			<section id="skills">
+					<div class="item">
+							<h3 class="name">
+								Macros
+							</h3>
+	
+							<div class="level intermediary">
+									<em>Intermediary</em>
+								<div class="bar"></div>
+							</div>
+	
+							<ul class="keywords">
+									<li>Visual Basic for Applications</li>
+							</ul>
+					</div>
+					<div class="item">
+							<h3 class="name">
+								Java
+							</h3>
+	
+							<div class="level beginner">
+									<em>Beginner</em>
+								<div class="bar"></div>
+							</div>
+	
+							<ul class="keywords">
+									<li>Core Java 8</li>
+									<li>Servlets/JSP</li>
+									<li>Spring</li>
+							</ul>
+					</div>
+					<div class="item">
+							<h3 class="name">
+								Databases
+							</h3>
+	
+							<div class="level beginner">
+									<em>Beginner</em>
+								<div class="bar"></div>
+							</div>
+	
+							<ul class="keywords">
+									<li>MySQL</li>
+									<li>Access</li>
+									<li>MongoDB</li>
+							</ul>
+					</div>
+					<div class="item">
+							<h3 class="name">
+								Microsoft Office
+							</h3>
+	
+							<div class="level advanced">
+									<em>Advanced</em>
+								<div class="bar"></div>
+							</div>
+	
+							<ul class="keywords">
+									<li>Excel</li>
+									<li>Word</li>
+									<li>Share-Point</li>
+							</ul>
+					</div>
+					<div class="item">
+							<h3 class="name">
+								Robotic Process Automation (RPA)
+							</h3>
+	
+							<div class="level beginner">
+									<em>Beginner</em>
+								<div class="bar"></div>
+							</div>
+	
+							<ul class="keywords">
+									<li>UiPath</li>
+							</ul>
+					</div>
+			</section>
+		</section>
+		<section class="section">
+			<header>
+				<h2 class='section-title'>Work Experience <span class="item-count">(8)</span></h2>
+			</header>
+	
+			<section id="work">
+				<section class="work-item">
+	
+	
+	
+					<div class="item" id="work-item">
+							<div class="summary"><p>Lorem Ipsum</p></div>
+	
+					</div>
+				</section>
+				<section class="work-item">
+	
+	
+	
+					<div class="item" id="work-item">
+							<div class="summary"><p>Responsible for identifying improvement opportunities to eliminate waste, automate manual work and standardize processes. Took ownership for solution design, development, implementation, documentation and maintenance of automation projects.</p></div>
+	
+							<ul class="highlights">
+									<li><p>Over 20 automation projects delivered, reducing over 150 hours per year of manual work</p></li>
+									<li><p>Upskilling through delivered projects mainly based on Microsoft technologies: Power Automate, Microsoft Flow, Sharepoint etc. </p></li>
+							</ul>
+					</div>
+				</section>
+				<section class="work-item">
+	
+	
+	
+					<div class="item" id="work-item">
+							<div class="summary"><p>KPI monitoring and reporting for a team of 30 employees. Responsible of designing and maintaining the reporting framework through data mining and dashboards creation (Power Bi)</p></div>
+	
+							<ul class="highlights">
+									<li><p>Developed an employee individual performance monitoring for better process health tracking</p></li>
+									<li><p>Upskilled data mining and analysis abilities through constant training and day-to-day data-analytics-practices exposure</p></li>
+							</ul>
+					</div>
+				</section>
+				<section class="work-item">
+	
+	
+	
+					<div class="item" id="work-item">
+							<div class="summary"><p>-Prepare internal reports for executive leadership and support their decision making.</p><p>-Create, update, and maintain financial models.</p><p>-Compare historical results against budgets and forecasts, and perform variance analysis.</p><p>-Implement and work with a Business Intelligence Tool and Dashboard reports.</p></div>
+	
+					</div>
+				</section>
+				<section class="work-item">
+	
+	
+	
+					<div class="item" id="work-item">
+							<div class="summary"><p>-VAT reporting;</p><p>-B/S reconciliation and inconsistency mitigation on: services, freight, marketing and salary accounts;</p><p>-preparation and posting of the incoming journal entries;</p><p>-VBA developer of excel finance tools (e.g. trackers, journal entry error proofers, work allocation tools etc.)  </p></div>
+	
+					</div>
+				</section>
+				<section class="work-item">
+	
+	
+	
+					<div class="item" id="work-item">
+							<div class="summary"><p>-payment preparation and execution activities</p><p>-help-desk</p><p>-sub-ledger account reconciliation</p></div>
+	
+					</div>
+				</section>
+				<section class="work-item">
+	
+	
+	
+					<div class="item" id="work-item">
+							<div class="summary"><p>-Developed in a team and individualy Java projects in gradual complexity ranges and focusing on OOP and SOLID principles.</p><p>-Good command of distributed version control systems (Git) gained through dedicated classes and independently.</p><p>-SQL and NoSQL (MySQL, MongoDB) know-how to support modern Java development requirements.</p><p>-Basic front-end involvment with HTML, CSS and Javascript through personal static web-pages.</p></div>
+	
+					</div>
+				</section>
+				<section class="work-item">
+	
+	
+	
+					<div class="item" id="work-item">
+							<div class="summary"><p>-technical and informational customer support</p><p>-identification of critical problems and the escalation of those situations towards the responsible department</p><p>-incoming calls and e-mails handling</p><p>-incoming orders and payment details handling</p><p>-database operations</p></div>
+	
+					</div>
+				</section>
+			</section>
+		</section>
+		<section class="section">
+			<header>
+				<h2 class='section-title'>Education <span class="item-count">(3)</span></h2>
+			</header>
+	
+			<section id="education">
+					<section class="education-item">
+	
+							<header class="clear">
+	
+										<div class="studyType">Bachelor’s Degree</div>
+										<div class="area">Foreign Languages, Literatures, and Linguistics</div>
+										<div class="institution">Universitatea „Babeș-Bolyai” din Cluj-Napoca</div>
+	
+	
+									<div class="date">
+										<span class="startDate">Dec 2011</span>
+											<span class="endDate">- Dec 2014</span>
+									</div>
+							</header>
+	
+						<div class="item">
+	
+	
+						</div>
+	
+					</section>
+					<section class="education-item">
+	
+							<header class="clear">
+	
+										<div class="studyType">High School</div>
+										<div class="area">Mathematics and Computer Science</div>
+										<div class="institution">Liceul Radu Petrescu</div>
+	
+	
+									<div class="date">
+										<span class="startDate">Dec 2009</span>
+											<span class="endDate">- Dec 2011</span>
+									</div>
+							</header>
+	
+						<div class="item">
+	
+	
+						</div>
+	
+					</section>
+					<section class="education-item">
+	
+							<header class="clear">
+	
+										<div class="area">Mathematics and Computer Science</div>
+										<div class="institution">Colegiul National Militar Mihai Viteazul</div>
+	
+	
+									<div class="date">
+										<span class="startDate">Dec 2007</span>
+											<span class="endDate">- Dec 2009</span>
+									</div>
+							</header>
+	
+						<div class="item">
+	
+	
+						</div>
+	
+					</section>
+			</section>
+		</section>
+		<section class="section">
+			<header>
+				<h2 class='section-title'>Volunteer</h2>
+			</header>
+			<section id="volunteer">
+					<section class="volunteer-item">
+	
+									<!--checked="checked" turn off-->
+									<input id="volunteer-item-0" type="checkbox" class="toggle-item"/>
+								<label for="volunteer-item-0"></label>
+	
+							<header class="clear">
+	
+										<div class="position">
+											Volunteer Staff
+										</div>
+									<div class="organization">
+										Romanian Testing Conference
+									</div>
+	
+								<div class="date">
+										<span class="startDate">
+											Jun 2022
+										</span>
+										<span class="endDate">
+	          - Current
+	          </span>
+								</div>
+							</header>
+						<div class="item">
+								<div class="summary"><p>Description…</p></div>
+						</div>
+					</section>
+			</section>
+		</section>
+		<section class="section">
+			<header>
+				<h2 class='section-title'>Languages</h2>
+			</header>
+	
+			<section id="languages">
+					<div class="display">
+							<h3 class="language">
+								Romanian
+							</h3>
+	
+						<div class="item">
+								<div class="level fluency native speaker">
+										<em>Native Speaker</em>
+									<div class="bar"></div>
+								</div>
+						</div>
+					</div>
+					<div class="display">
+							<h3 class="language">
+								English
+							</h3>
+	
+						<div class="item">
+								<div class="level fluency fluent">
+										<em>Fluent</em>
+									<div class="bar"></div>
+								</div>
+						</div>
+					</div>
+			</section>
+		</section>
+</div>
+</body>
 </html>
